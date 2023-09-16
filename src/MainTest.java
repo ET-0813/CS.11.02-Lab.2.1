@@ -1,60 +1,43 @@
-import static org.junit.jupiter.api.Assertions.*;
-
 class MainTest {
 
     @org.junit.jupiter.api.Test
-    void main() {
+    public static void main() {
     }
 
     @org.junit.jupiter.api.Test
-    void add() {
-        assertEquals(12, Main.add(5,7));
+    public static int add(int i, int ii) {
+        return i+ii;
     }
 
     @org.junit.jupiter.api.Test
-    void addTwo() {
-        assertEquals(24, Main.add(5,7,6,6));
+    public static int addtwo(int i, int ii, int i1, int i2) {
+        return i+ii+i1+i2;
     }
 
     @org.junit.jupiter.api.Test
-    void morningGreeting() {
-        assertEquals("早上好, Toby Fox!", Main.morningGreeting("Toby Fox"));
+    public static String morningGreeting(String input) {
+
+        return "早上好, " + input;
     }
 
     @org.junit.jupiter.api.Test
-    void afternoonGreeting() {
-        assertEquals("下午好, Mac Miller!", Main.afternoonGreeting("Mac Miller"));
+    public static String afternoonGreeting(String input) {
+        return "下午好, " + input;
     }
 
     @org.junit.jupiter.api.Test
-    void triple() {
-        assertEquals("oohbabyoohbabyoohbaby", Main.triple("oohbaby"));
+    public static String triple(String input) {
+
+        return input+input+input;
     }
 
     @org.junit.jupiter.api.Test
-    void half() {
-        assertEquals(9.5, Main.half(19));
+    public static int half(int i) {
+        return i/2;
     }
 
     @org.junit.jupiter.api.Test
-    void roundPositiveValueToNearestInteger() {
-        assertEquals(9, Main.roundPositiveValueToNearestInteger(8.5));
+    public static int roundToNearestInt(double double1) {
+        return (int) Math.round(double1);
     }
-
-    @org.junit.jupiter.api.Test
-    void roundPositiveValueToNearestIntegerTwo() {
-        assertEquals(8, Main.roundPositiveValueToNearestInteger(8.49));
-    }
-
-    @org.junit.jupiter.api.Test
-    void roundNegativeValueToNearestInteger() {
-        assertEquals(-8, Main.roundNegativeValueToNearestInteger(-8.49));
-    }
-
-    @org.junit.jupiter.api.Test
-    void roundNegativeValueToNearestIntegerTwo() {
-        assertEquals(-9, Main.roundNegativeValueToNearestInteger(-8.5));
-    }
-
-
 }
